@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div class="sidebar">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+        </ul>
+    </div>
+<div class="container">    
+  <ul class="nav nav-tabs" role="tablist">
+        <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a routerLink = "location"><span class='glyphicon glyphicon-map-marker'></span>&nbsp; Location</a>
+        </li>
+        <li [routerLinkActive]='["link-active"]'>
+            <a [routerLink]='["/table"]'><span class="glyphicon glyphicon-th"></span>&nbsp; Table</a>
+        </li>
+        <li [routerLinkActive]='["link-active"]'>
+            <a [routerLink]='["/form"]'><span class="glyphicon glyphicon-th-list"></span>&nbsp; Form</a>
+        </li>
+  </ul>
+  
+<router-outlet></router-outlet>
